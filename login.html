@@ -9,21 +9,80 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url("./loginbg.jpg");
+      background-position: center;
+      /* Center the image */
+      background-repeat: no-repeat;
+      /* Do not repeat the image */
+      background-size: cover;
+    }
+  </style>
 </head>
 
 <body>
-  <center>
-    <h2>Login Page</h2>
-    <center>
-      <center>
-        <form method="post" action="http://localhost/WebProject/login.php" enctype="multipart/form-data">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">BookRes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Resorts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <a href="home.html" style="margin:5px">Home</a>
+        <a href="login.html" style="margin:5px">Login</a>
+        <a href="register.html" style="margin:5px">Register</a>
+      </span>
+    </div>
+  </nav>
 
-          <input type="text" name="username" placeholder="Username"><br>
-          <p id="inv"></p>
-          <input type="password" name="password" placeholder="Password"><br><br>
-          <input type="submit" value="Submit">
-        </form>
-        <center>
+
+  <form method="post" action="http://localhost/WebProject/login.php" enctype="multipart/form-data">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="card card-signin my-5">
+            <div class="card-body">
+              <h5 class="card-title text-center">Sign In</h5>
+              <form class="form-signin">
+                <div class="form-label-group">
+                  <input type="text" name="username" id="username" class="form-control" placeholder="Username" required
+                    autofocus>
+                  <label for="username">Username</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password"
+                    required>
+                  <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Remember password</label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                <hr class="my-4">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
 
 </body>
 
