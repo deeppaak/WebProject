@@ -8,7 +8,7 @@
 
     $username =  $_POST['username'];
     $password =  $_POST['password'];
-    
+    //HIIII
     // Check user exists for usernmae & password given
     $sql = "select * from login where username='$username' and password='$password'";
     $result = $conn->query($sql);
